@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *,
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
+
+    :root {
+      --cyan: hsl(179, 62%, 43%);
+      --cyan-dimmer: hsl(179, 47%, 52%);
+      --bright-yellow: hsl(71, 73%, 54%);
+      --light-gray: hsl(204, 43%, 93%);
+      --grayish-blue: hsl(218, 22%, 67%);
+    }
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Karla', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      display: grid;
+      place-content: center;
+      min-block-size: 100vh;
+      background-color: var(--grayish-blue);
+    }
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto, 1fr);
+      background-color: white;
+      border-radius: 0.8rem;
+      max-width: 650px;
+      overflow: hidden;
+    }
+
+    .content-container {
+      padding: 2rem 2.6rem;
+      margin-top: -1rem;
+    }
+
+    .card h2 {
+      font-weight: 700;
+      color: var(--cyan);
+    }
+
+    .card {
+      line-height: 1.8rem;
+    }
+
+    .card span {
+      color: var(--bright-yellow);
+      font-weight: 700;
+    }
+
+    .card p {
+      color: var(--grayish-blue);
+    }
+
+    .card2 {
+      display: flex;
+    }
+
+    .card2>* {
+      width: 50%;
+    }
+
+    .left__card {
+      background-color: var(--cyan);
+      color: white;
+    }
+
+    .price {
+      color: var(--light-gray);
+      display: flex;
+      align-items: center;
+    }
+
+    .price span {
+      color: white;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-right: 0.625rem;
+    }
+
+    .right__card {
+      background-color: var(--cyan-dimmer);
+      color: white;
+    }
+
+    .right__card .content-container {
+      font-weight: 700;
+      line-height: 1.3rem;
+    }
+
+    .right__card p {
+      color: var(--light-gray);
+      font-weight: 400;
+      padding: 0;
+      margin: 0;
+    }
+
+    .btn {
+      text-align: center;
+    }
+
+    button {
+      width: 100%;
+      max-width: 250px;
+      padding: 0.7em;
+      background-color: var(--bright-yellow);
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+      }
+
+      .card2 {
+        display: grid;
+      }
+
+      .card2>* {
+        width: 100%
+      }
+
+      .left__card .btn,
+      button {
+        max-width: 400px;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="wrapper">
+      <div class="card">
+        <div class="content-container">
+
+          <h2>
+            Join our community
+          </h2>
+
+          <span>
+            30-day, hassle-free money back guarantee
+          </span>
+
+          <p>
+            Gain access to our full library of tutorials along with expert code reviews.
+            Perfect for any developers who are serious about honing their skills.
+          </p>
+        </div>
+      </div>
+
+      <div class="card2">
+        <div class="left__card">
+          <div class="content-container">
+            <h3>
+              Monthly Subscription
+            </h3>
+
+            <div class="price">
+              <span>&dollar;29</span> per month
+            </div>
+
+            <p>
+              Full access for less than &dollar;1 a day
+            </p>
+            <div class="btn">
+              <button>
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="right__card">
+          <div class="content-container">
+            <h3>
+              Why Us
+            </h3>
+
+            <p>Tutorials by industry experts</p>
+            <p>Peer &amp; expert code review</p>
+            <p>Coding exercises</p>
+            <p>Access to our GitHub repos</p>
+            <p>Community forum</p>
+            <p>Flashcard decks</p>
+            <p>New videos every week</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
